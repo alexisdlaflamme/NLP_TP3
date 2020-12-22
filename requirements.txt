@@ -1,0 +1,6 @@
+spacy~=2.3.2
+whoosh~=2.7.4
+nltk~=3.5
+numpy~=1.19.4
+scikit-learn~=0.21.1
+poutyne~=1.0.1

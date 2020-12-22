@@ -21,13 +21,7 @@ def createSearchableData(root):
     filepaths = [os.path.join(root, i) for i in os.listdir(root)]
     for path in filepaths:
         fp = open(path, 'r', encoding="utf8")
-        print(path)
         text = fp.read()
         writer.add_document(title=path.split("\\")[1], path=path, content=text, textdata=text)
         fp.close()
     writer.commit()
-
-
-if __name__ == "__main__":
-    root = "./corpus"
-    createSearchableData(root)

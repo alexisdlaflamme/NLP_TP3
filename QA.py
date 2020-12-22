@@ -1,9 +1,12 @@
+import os
+
 import spacy
 from whoosh import scoring, qparser
 from whoosh.index import open_dir
 from whoosh.qparser import QueryParser
 from QuestionClassifier import QuestionClassifier, load_question_classifier, obtain_prediction
 from GenerateQuerry import generate_query
+from createSearchableData import createSearchableData
 from generateRespond import final_answer, custom_distance
 
 if __name__ == "__main__":
@@ -11,6 +14,12 @@ if __name__ == "__main__":
     print("###########################")
     print("#  Bienvenue dans QA 1.0  #")
     print("###########################")
+
+    if not os.path.exists('indexdir'):
+        print("")
+        print("Veuillez patienter pendant la l'indexation du corpus")
+        createSearchableData("./corpus")
+        print("Terminé! Vous pourrez utiliser notre système Q&A dans quelques secondes")
 
     print("")
     print("Veuillez faire attention à votre ortographe lorsque vous posez une question!")

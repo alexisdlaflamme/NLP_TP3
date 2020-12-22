@@ -3,10 +3,8 @@ import spacy
 import numpy as np
 import torch.nn as nn
 from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
-from sklearn.model_selection import train_test_split
 from torch.utils.data import DataLoader
 from poutyne.framework import Experiment
-from poutyne import set_seeds
 from helpers import save_item_to_pkl, model_param, load_item_from_pkl
 from load_data import load_question_type
 from QuestionDataset import QuestionDataSet, pad_batch

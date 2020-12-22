@@ -23,6 +23,3 @@ def generate_query(sentence):
     query_string = "".join(query)
     return query_string[:-5]
 
-
-if __name__ == "__main__":
-    print(generate_query("What did Carl Yung studied?"))

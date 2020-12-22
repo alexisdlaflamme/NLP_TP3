@@ -113,9 +113,3 @@ def final_answer(query, answers, distances, n=2):
         answers.append(answer)
 
     return answers
-
-
-if __name__ == "__main__":
-    str1 = "bizz, patate de feu, allo le chie est patate de feu dans la allo bouche de Moise bizz, patate de feu, patate allo bizz"
-
-    print(custom_distance("allo,bizz", "patate de feu", str1, 1))
